@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amelie</title>
+
+    <style>
+        body {
+            background: #202124;
+            justify-items: center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .bild {
+            background: #681E36;
+            color: #F3E8E6;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        .link {
+            background: #D6AD70;
+            padding: 10px;
+            border: 2px solid #202124;
+            border-radius: 10px;
+            margin-top: 100px;
+        }
+        #countdown {
+            background: #681E36;
+            color: #F3E8E6;
+            padding: 15px 40px;
+            border: 2px solid #D6AD70;
+            border-radius: 10px;
+            text-align: center;
+            width: 360px;
+        }
+        h1 {
+            color: #D6AD70;
+            
+        }
+        h2 {
+            color: #D6AD70;
+        }
+        a {
+            color: #202124;
+        }
+        img {
+            height: 150px;
+            width: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hallo Sonnenschein</h1>
+    <div class="bild">
+        Freust du dich schon auf unser wiedersehen?<br>
+        <img src="img/amelie.jpeg"> <br>
+        Ich kann es kaum Abwarten!
+    </div>
+    <h2>Es sind noch:</h2>
+    
+    <div id="countdown">00:00:00:00</div>
+    <div class="link">
+        <a href="kniffel.html" >Hier klicken für Überrschung!</a>
+    </div>    
+    <script>
+        const ziel = new Date("2026-12-28T14:50:00").getTime();
+
+        function countdown() {
+        const jetzt = Date.now();
+        const diff = ziel - jetzt;
+
+        if (diff <= 0) {
+            document.getElementById("countdown").textContent = "Ich bin Gekommen! (hihihihihihihihihi)";
+            return;
+        }
+
+        const tage = Math.floor(diff / 86400000);
+        const stunden = Math.floor((diff % 86400000) / 3600000);
+        const minuten = Math.floor((diff % 3600000) / 60000);
+        const sekunden = Math.floor((diff % 60000) / 1000);
+
+        document.getElementById("countdown").textContent =
+            `${tage} Tage : ${String(stunden).padStart(2, "0")} Stunden : ` +
+            `${String(minuten).padStart(2, "0")} Minuten : ` +
+            `${String(sekunden).padStart(2, "0")} Sekunden`;
+        }
+
+        countdown();
+        setInterval(countdown, 1000);
+    </script>
+
+</body>
+</html>

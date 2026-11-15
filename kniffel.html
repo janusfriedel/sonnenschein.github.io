@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amelie</title>
+
+    <style>
+        body {
+            background: #202124;
+            justify-items: center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .bild {
+            background: #681E36;
+            color: #F3E8E6;
+            width: 100%;
+            text-align: center;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        .link {
+            background: #D6AD70;
+            padding: 10px;
+            border: 2px solid #202124;
+            border-radius: 10px;
+            margin-top: 100px;
+        }
+        .button {
+            margin-top: 40px;
+            background: #681E36;
+            color: #F3E8E6;
+            padding: 15px 40px;
+            border: 2px solid #D6AD70;
+            border-radius: 10px;
+            text-align: center;
+            display:flex
+            
+        }
+        h1 {
+            color: #D6AD70;
+            
+        }
+        h2 {
+            color: #D6AD70;
+        }
+        a {
+            color: #202124;
+        }
+        img {
+            height: 100px;
+            width: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kniffel</h1>
+    <div class="bild">
+        Wenn du ein Kniffel würfelst dann musst du heute eine Runde gegen mich spielen.<br>
+        <img id="zahl1" src="img/wuerfel_1.png">
+        <img id="zahl2" src="img/wuerfel_2.png">
+        <img id="zahl3" src="img/wuerfel_3.png"><br>
+        <img id="zahl4" src="img/wuerfel_4.png">
+        <img id="zahl5" src="img/wuerfel_5.png">
+    </div>
+    <input class="button" type="button" onclick="wuerfeln()" value="Würfeln">
+    <div class="link">
+        <a href="index.html" >Zurück</a>
+    </div>    
+    <script>
+        function wuerfeln() {
+            let img_obj1 = document.getElementById('zahl1');
+            let img_obj2 = document.getElementById('zahl2');
+            let img_obj3 = document.getElementById('zahl3');
+            let img_obj4 = document.getElementById('zahl4');
+            let img_obj5 = document.getElementById('zahl5');
+
+            img_obj1.setAttribute("src", "img/wuerfel_6.png");
+            img_obj2.setAttribute("src", "img/wuerfel_6.png");
+            img_obj3.setAttribute("src", "img/wuerfel_6.png");
+            img_obj4.setAttribute("src", "img/wuerfel_6.png");
+            img_obj5.setAttribute("src", "img/wuerfel_6.png");
+
+
+            
+        }
+    </script>
+
+</body>
+</html>
