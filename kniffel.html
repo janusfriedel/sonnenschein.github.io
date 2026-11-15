@@ -64,7 +64,7 @@
         <img id="zahl4" src="img/wuerfel_4.png">
         <img id="zahl5" src="img/wuerfel_5.png">
     </div>
-    <input class="button" type="button" onclick="wuerfeln()" value="Würfeln">
+    <input  id="b" class="button" type="button" onclick="wuerfeln()" value="Würfeln">
     <div class="link">
         <a href="index.html" >Zurück</a>
     </div>    
@@ -82,8 +82,8 @@
             img_obj4.setAttribute("src", "img/wuerfel_6.png");
             img_obj5.setAttribute("src", "img/wuerfel_6.png");
 
-
-            
+            let obj_b = document.getElementById('b');
+            obj_b.setAttribute("value", "Yüppiiii!");
         }
     </script>
 
